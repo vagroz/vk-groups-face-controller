@@ -1,0 +1,6 @@
+.idea/
+resource/*
+*/__pycache__/
+*/*/__pycache__/
+src/*.json
+src/settings_*.py
