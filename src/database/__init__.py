@@ -55,3 +55,9 @@ class BlackListDb:
         result = curs.fetchall()
         curs.close()
         return set(map(lambda x: x[0], result))
+
+    def count(self):
+        curs = self._conn.execute("""
+            SELECT COUNT(*) FROM black_list
+        """)
+        return curs.fetchone()[0]
